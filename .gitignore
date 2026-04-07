@@ -1,0 +1,25 @@
+# Blindaje AB-GEN: Solo se sube la Demo e Inferencia
+# Ignorar scripts de entrenamiento y laboratorio en la raíz
+/*.py
+!demo/*.py
+
+# Ignorar archivos temporales y locales
+.venv/
+env/
+__pycache__/
+*.log
+.DS_Store
+*.tmp
+static/uploads/*
+!static/uploads/.gitkeep
+
+# Ignorar bases de datos locales
+datasets/
+plant_village/
+
+# Permitir explícitamente la documentación y la demo
+!README.md
+!AB-GEN_WHITEPAPER.md
+!benchmark_abgen.md
+!demo/
+!publish_to_github.bat

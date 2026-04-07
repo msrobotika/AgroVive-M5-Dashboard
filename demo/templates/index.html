@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AB-GEN AgroVive | M5 Inference Engine</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glass-container">
+        <header>
+            <div class="logo-area">
+                <h1>AB-GEN <span>AgroVive</span></h1>
+                <p class="tagline">M5 Topological Inference Dashboard</p>
+            </div>
+            <div class="status-badge" id="system-status">
+                <span class="dot"></span> SYSTEM ONLINE
+            </div>
+        </header>
+
+        <main>
+            <section class="upload-section">
+                <div class="card glass" id="drop-zone">
+                    <div class="upload-icon">📸</div>
+                    <h3>Escanear Cultivo</h3>
+                    <p>Arrastra una imagen o haz clic para subir</p>
+                    <input type="file" id="file-input" hidden accept="image/*">
+                    <button class="btn-primary" id="select-btn">Seleccionar Imagen</button>
+                </div>
+            </section>
+
+            <section class="results-section hidden" id="results-panel">
+                <div class="grid">
+                    <!-- Image Preview -->
+                    <div class="card glass preview-card">
+                        <div class="card-header">VISTA PREVIA</div>
+                        <div class="image-container">
+                            <img id="preview-img" src="" alt="Preview">
+                            <div class="scanning-line"></div>
+                        </div>
+                    </div>
+
+                    <!-- Diagnosis -->
+                    <div class="card glass diagnosis-card">
+                        <div class="card-header">DIAGNÓSTICO M5</div>
+                        <div class="diagnosis-content">
+                            <h2 id="final-prediction">Detecting...</h2>
+                            <div class="confidence-meter">
+                                <label>Confianza: <span id="confidence-val">0%</span></label>
+                                <div class="progress-bar"><div class="fill" id="confidence-fill"></div></div>
+                            </div>
+                            <div class="meta-info">
+                                <div class="meta-item">
+                                    <span class="label">Ruta Estratégica:</span>
+                                    <span class="value" id="m5-route">-</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="label">Tiempo de Inferencia:</span>
+                                    <span class="value" id="inference-time">0ms</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Top Classes -->
+                    <div class="card glass top-classes-card">
+                        <div class="card-header">TOP 3 ACTIVACIONES</div>
+                        <ul id="top3-list" class="top-list">
+                            <!-- JS will populate this -->
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="m5-badge">M5 Green AI Engine</div>
+                <div class="copyright">&copy; 2026 AB-GEN. Advanced Agentic Coding System.</div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Error Toast -->
+    <div id="toast" class="toast hidden"></div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
