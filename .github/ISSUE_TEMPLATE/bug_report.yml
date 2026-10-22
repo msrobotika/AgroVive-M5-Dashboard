@@ -1,0 +1,20 @@
+name: "Incidencia o reproducibilidad"
+description: "Fallo o resultado científico que no puede reproducirse"
+title: "[investigation] "
+body:
+  - type: input
+    id: environment
+    attributes:
+      label: Versión, datos, entorno y semillas
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Pasos y evidencia reproducible
+    validations:
+      required: true
+  - type: textarea
+    id: privacy
+    attributes:
+      label: Controles de privacidad, procedencia y licencias del material

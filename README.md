@@ -1,4 +1,10 @@
 # AB-GEN | AgroVive M5 Dashboard
+
+> **Ficha del proyecto · MS ROBOTIKA**  
+> **Estado:** Demostrador agrícola / investigación de visión artificial  
+> **Licencia:** no existe archivo LICENSE en main; permisos de redistribución **pendientes de aclarar**.  
+> [Estado técnico](docs/PROJECT_STATUS.md) · [Problemas y evidencias](https://github.com/msrobotika/AgroVive-M5-Dashboard/issues)  
+> **EVIDENCIA PENDIENTE:** el rendimiento y las cifras de consumo divulgados previamente no están acreditados como benchmarks independientes reproducibles. La galería contiene imágenes agrícolas de ejemplo, no capturas verificadas de ejecución.
 ### Experimental non-CNN agricultural image-classification dashboard
 
 [![Status: Experimental](https://img.shields.io/badge/Status-Experimental-grey.svg)](https://github.com/msrobotika/AgroVive-M5-Dashboard)
