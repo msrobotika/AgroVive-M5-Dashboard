@@ -1,0 +1,29 @@
+name: AgroVive · source integrity
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  static-validation:
+    name: Syntax and evidence documents (no model execution)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check app source without loading pickle models or data
+        run: |
+          python -m py_compile demo/app.py demo/engine.py
+          node --check demo/static/js/main.js
+          test -s LICENSE
+          test -f EVIDENCE_STATUS.md
+      - name: Declare boundary
+        run: echo 'Syntax/doc checks only. No dataset, model, energy, SOTA, or field-use metrics validated.'
