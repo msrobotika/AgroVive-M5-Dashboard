@@ -1,12 +1,16 @@
 # AB-GEN | AgroVive M5 Dashboard
-### The Future of High-Precision, Non-Neural Agricultural Intelligence
+### Experimental non-CNN agricultural image-classification dashboard
 
-[![Project Status: Active](https://img.shields.io/badge/Project%20Status-Active-brightgreen.svg)](https://github.com/msrobotika/AgroVive-M5-Dashboard)
-[![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-blue.svg)](LICENSE)
+[![Status: Experimental](https://img.shields.io/badge/Status-Experimental-grey.svg)](https://github.com/msrobotika/AgroVive-M5-Dashboard)
+[![Code license: AGPL-3.0](https://img.shields.io/badge/Code%20license-AGPL--3.0-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![YouTube Demo](https://img.shields.io/badge/YouTube-Video%20Demo-red.svg)](https://youtu.be/C9E_C58Cu3U?is=9MVm3AbTfJL4_KCd)
 
-**AB-GEN AgroVive** is a specialized implementation of the AB-GEN Universal Inference Engine, specifically tuned for the **PlantVillage** dataset. It achieves **~100% precision** in plant disease detection without the carbon footprint or latency of traditional Convolutional Neural Networks (CNNs).
+**AB-GEN AgroVive** is a research dashboard exploring a non-CNN classification pipeline for agricultural images. Historical project material reports near-perfect PlantVillage performance, but that number has **not been independently reproduced through a documented leakage-free RAW→prediction evaluation**. No energy advantage over CNNs has been verified under a matched benchmarking protocol.
+
+---
+
+**Scope:** demonstration and research, not a certified plant-disease diagnostic service or a basis for automated pesticide application. See [Safety & security](SECURITY.md), [License](LICENSE) and [Evidence status](EVIDENCE_STATUS.md). Models, datasets and images can have separate rights.
 
 ---
 
@@ -17,32 +21,27 @@
 
 ---
 
-## 🧠 Why AB-GEN? (The M5 Advantage)
+## Research questions and hypotheses
 
-Traditional AI depends on **Backpropagation** and massive GPU clusters. AB-GEN is built on a different philosophy: **Topological Geometric Intelligence**.
+The prototype explores geometric and spectral features. The following are research hypotheses, **not established commercial or scientific performance advantages**:
 
-*   🌿 **Green AI**: Trained in minutes on standard CPUs. 95% less energy than ResNet/EfficientNet.
-*   🔍 **XAI (Explainable AI)**: Every diagnosis is traceable. No "Black Box" decisions.
-*   ⚡ **Zero Latency**: Sub-100ms inference on Edge devices (Mobile, IoT).
-*   🎯 **High Precision**: Surpassing SOTA benchmarks on MNIST, CIFAR-10, and PlantVillage.
+*   🌿 **Green AI**: Can lower resource use in principle; no matching joules-per-image benchmark is currently validated.
+*   🔍 **XAI (Explainable AI)**: The pipeline exposes intermediate signals, but this does not establish faithful explanations of model decisions.
+*   ⚡ **Latency target**: runtime benchmarks on actual Edge hardware are needed; no zero-latency claim.
+*   🎯 **Accuracy target**: requires contamination checks, identical splits and comparisons to clearly specified baselines.
 
 ---
 
 ## 🔬 Scientific Whitepaper
 For a deep dive into the **M5 Feature Space** (PCA-Fisher Projection, Multi-Scale FFT, and Gradient Similarity Bridges), read the official document:
 
-👉 **[AB-GEN_WHITEPAPER.md](AB-GEN_WHITEPAPER.md)**
+See the [AB-GEN reproducibility audit](https://github.com/msrobotika/AB-GEN-Green-AI) and [local evidence-status requirements](EVIDENCE_STATUS.md).
 
 ---
 
-## 📊 Performance Benchmark (V24 Engine)
+## Historical accuracy claims — NOT VALIDATED in this repository
 
-| Dataset | Domain | Accuracy | Lead vs SOTA |
-| :--- | :--- | :--- | :--- |
-| **PlantVillage** | Agriculture | **~100.00%** | +15.0% |
-| **MNIST** | Numerics | **97.79%** | +5.3% |
-| **Fashion MNIST**| Retail/Textures| **90.17%** | +5.2% |
-| **CIFAR-10** | Real Objects | **~85.20%** | +5.2% |
+The original project README included PlantVillage ~100%, MNIST 97.79%, Fashion-MNIST 90.17% and CIFAR-10 ~85.20% along with claimed SOTA margins. **These are historical assertions, not verified benchmark results.** In particular, they should not be interpreted as matching the independently audited AB-GEN evaluation records, which have different documented routes and accuracies. Reproducible source commits, dataset hashes, preprocessing, splits, predictions and baselines are required before any number can be advertised as validated.
 
 ---
 
