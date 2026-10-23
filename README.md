@@ -2,8 +2,8 @@
 
 > **Ficha del proyecto · MS ROBOTIKA**  
 > **Estado:** Demostrador agrícola / investigación de visión artificial  
-> **Licencia:** no existe archivo LICENSE en main; permisos de redistribución **pendientes de aclarar**.  
-> [Estado técnico](docs/PROJECT_STATUS.md) · [Problemas y evidencias](https://github.com/msrobotika/AgroVive-M5-Dashboard/issues)  
+> **Licencia del código:** [AGPL-3.0](LICENSE) presente en main. Los pesos, datasets y fotografías pueden tener licencias y derechos independientes aún pendientes de inventario.  
+> [Estado técnico](docs/PROJECT_STATUS.md) · [Política de evidencias](EVIDENCE_STATUS.md) · [CI de integridad](.github/workflows/ci.yml) · [Problemas y evidencias](https://github.com/msrobotika/AgroVive-M5-Dashboard/issues)  
 > **EVIDENCIA PENDIENTE:** el rendimiento y las cifras de consumo divulgados previamente no están acreditados como benchmarks independientes reproducibles. La galería contiene imágenes agrícolas de ejemplo, no capturas verificadas de ejecución.
 ### Experimental non-CNN agricultural image-classification dashboard
 
